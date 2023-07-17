@@ -29,7 +29,7 @@ window.onload = function () {
     var result =
       fat / fatNum + carbs / carbNum + protein / proteinNum - fiber / fiberNum;
     console.log(result);
-    var resultRound = Math.round(result);
+    var resultRound = Math.ceil(result);
     var resultShow = document.getElementById("results");
     resultShow.innerHTML = "This item is worth " + resultRound + " points";
   }

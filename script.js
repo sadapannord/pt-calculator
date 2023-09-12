@@ -1,3 +1,15 @@
+// Service Worker Registration
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/service-worker.js")
+    .then(function (registration) {
+      console.log("Service Worker registered with scope:", registration.scope);
+    })
+    .catch(function (error) {
+      console.log("Service Worker registration failed:", error);
+    });
+}
+
 window.onload = function () {
   var fat = "";
   var carbs = "";
@@ -25,6 +37,7 @@ window.onload = function () {
       parseFloat(fiber)
     );
   });
+
   function calculate(fat, carbs, protein, fiber) {
     var result =
       fat / fatNum + carbs / carbNum + protein / proteinNum - fiber / fiberNum;

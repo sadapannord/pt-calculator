@@ -44,6 +44,6 @@ window.onload = function () {
     console.log(result);
     var resultRound = Math.ceil(result);
     var resultShow = document.getElementById("results");
-    resultShow.innerHTML = "This item is worth " + resultRound + " points";
+    resultShow.innerHTML = "This item is worth " + resultRound + " point(s)";
   }
 };
